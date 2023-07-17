@@ -71,7 +71,7 @@ class ConfigurationManager:
         training = self.config.training
         prepare_base_model = self.config.prepare_base_model
         params = self.params
-        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "Chicken-fecal-images")
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, DATASET_FOLDER_NAME)
         create_directories([
             Path(training.root_dir)
         ])
@@ -92,7 +92,7 @@ class ConfigurationManager:
     def get_validation_config(self) -> EvaluationConfig:
         eval_config = EvaluationConfig(
             path_of_model=Path("artifacts/training/model.h5"),
-            training_data=Path("artifacts/data_ingestion/Chicken-fecal-images"),
+            training_data=Path(f"artifacts/data_ingestion/{DATASET_FOLDER_NAME}"),
             all_params=self.params,
             params_image_size=self.params.IMAGE_SIZE,
             params_batch_size=self.params.BATCH_SIZE

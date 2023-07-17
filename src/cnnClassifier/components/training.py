@@ -1,6 +1,7 @@
 from cnnClassifier.entity.config_entity import TrainingConfig
 import tensorflow as tf
 from pathlib import Path
+import os
 
 class Training:
     def __init__(self, config: TrainingConfig):
@@ -63,17 +64,19 @@ class Training:
     def train(self, callback_list: list):
         self.steps_per_epoch = self.train_generator.samples // self.train_generator.batch_size
         self.validation_steps = self.valid_generator.samples // self.valid_generator.batch_size
+        if not os.path.isdir('artifacts/training') or not os.path.isfile('artifacts/training/model.h5'):
+            device = '/GPU:0' if tf.config.list_physical_devices('GPU') else '/CPU:0'
+            print(f"Using device: ${device}")
+            self.model.fit(
+                self.train_generator,
+                epochs=self.config.params_epochs,
+                steps_per_epoch=self.steps_per_epoch,
+                validation_steps=self.validation_steps,
+                validation_data=self.valid_generator,
+                callbacks=callback_list
+            )
 
-        self.model.fit(
-            self.train_generator,
-            epochs=self.config.params_epochs,
-            steps_per_epoch=self.steps_per_epoch,
-            validation_steps=self.validation_steps,
-            validation_data=self.valid_generator,
-            callbacks=callback_list
-        )
-
-        self.save_model(
-            path=self.config.trained_model_path,
-            model=self.model
-        )
+            self.save_model(
+                path=self.config.trained_model_path,
+                model=self.model
+            )

@@ -38,7 +38,7 @@ def predictRoute():
     image = request.json['image']
     decodeImage(image, clApp.filename)
     result = clApp.classifier.predict()
-    return jsonify(result)
+    return jsonify(result) 
 
 
 if __name__ == "__main__":

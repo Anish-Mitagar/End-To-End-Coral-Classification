@@ -1,4 +1,4 @@
-tensorflow#-macos==2.12.0 #or tensorflow of linux or windows devices
+tensorflow 
 pandas
 dvc 
 notebook
@@ -15,3 +15,4 @@ scipy
 Flask
 Flask-Cors
 #-e .
+#-macos==2.12.0 #or tensorflow of linux or windows devices

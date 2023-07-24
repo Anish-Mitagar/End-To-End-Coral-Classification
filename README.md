@@ -1,14 +1,12 @@
-# Bleached/Healthy Coral Binary Classification (An End-To-End ML Project using Tensorflow)
+# Bleached/Healthy Coral Binary Classification 
+# (An End-To-End ML Project using Tensorflow)
 
 ## Motivation
 
 This project was inspired by a recent trip to Key Largo, Florida where I took a boat tour on boat that had clear acrylic bottom so we could see the ocean life and coral reef beneath us. And was curious if identifying bleached and healthy coral could be solved using deep learning.
 
 <img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 50%;"
+    style="display: block; margin: 0 auto; width: 75%"
     src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2015/10/03145905/before-after-900x600.jpg" 
     alt="Our logo">
 </img>
@@ -16,10 +14,7 @@ This project was inspired by a recent trip to Key Largo, Florida where I took a 
 ## Simple Binary Classifaction Application
 
 <img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 70%;"
+    style="display: block; margin: 0 auto; width: 75%"
     src="demo.gif" 
     alt="Our logo">
 </img>
@@ -27,19 +22,13 @@ This project was inspired by a recent trip to Key Largo, Florida where I took a 
 ## Model Architecture: VGGNet16 + Imagenet Weights + Additional Layer for Transfer Learning
 
 <img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 50%;"
+    style="display: block; margin: 0 auto; width: 75%"
     src="https://miro.medium.com/max/9999/1*_Lg1i7wv1pLpzp2F4MLrvw.png" 
     alt="Our logo">
 </img>
 
 <img 
-    style="display: block; 
-           margin-left: auto;
-           margin-right: auto;
-           width: 50%;"
+    style="display: block; margin: 0 auto; width: 75%"
     src="https://storage.googleapis.com/lds-media/images/transfer-learning-fine-tuning-approach.original.jpg" 
     alt="Our logo">
 </img>

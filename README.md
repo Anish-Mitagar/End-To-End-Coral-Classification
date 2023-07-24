@@ -1,6 +1,9 @@
 # Bleached/Healthy Coral Binary Classification 
 # (An End-To-End ML Project using Tensorflow)
 
+#### Important Note: 
+If Cloning this project, go to requirements.txt and change tensorflow to tensorflow-macos and add tensorflow-metal if you intend to run on a Mac device.
+
 ## Motivation
 
 This project was inspired by a recent trip to Key Largo, Florida where I took a boat tour on boat that had clear acrylic bottom so we could see the ocean life and coral reef beneath us. And was curious if identifying bleached and healthy coral could be solved using deep learning.

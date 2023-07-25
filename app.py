@@ -25,7 +25,7 @@ def home():
 def trainRoute():
     os.system("python3 main.py")
     return "Training done successfully!"
-
+ 
 @app.route("/predict", methods=['POST'])
 @cross_origin()
 def predictRoute():

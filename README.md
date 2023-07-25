@@ -2,7 +2,7 @@
 # (An End-To-End ML Project using Tensorflow)
 
 #### Important Notes: 
-If Cloning this project, go to requirements.txt and change tensorflow to tensorflow-macos and add tensorflow-metal if you intend to run on a Mac device.
+If Cloning this project, go to requirements.txt and change tensorflow to tensorflow-macos and add tensorflow-metal if you intend to run on a Mac device. Training in reasonable time depends on your hardware.
 
 If you just want to run pipeline and not the app run ```python3 main.py```
 
